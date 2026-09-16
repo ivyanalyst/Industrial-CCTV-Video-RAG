@@ -84,6 +84,12 @@ each with `timestamp`, `score`, and `jpeg_base64` — render as
 - FAISS cache uses FIFO eviction with stale-row tolerance at eviction time —
   fine at demo scale (thousands of frames), not designed for long-running
   production retention.
+- Tested against a real consumer IP camera (Yoosee); its RTSP firmware rejects 
+  the OPTIONS method required by standard RTSP clients (confirmed against three 
+  independent implementations: ffmpeg, VLC, mediamtx/gortsplib), a known 
+  compatibility gap in some budget camera firmware. Ingestion layer validated 
+  against file-based sources; RTSP protocol handling itself is standards-compliant 
+  and would work against any camera with a conformant RTSP server. 
 
 ## Acknowledgments & Citation
 
