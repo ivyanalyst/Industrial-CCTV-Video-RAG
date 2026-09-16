@@ -1,0 +1,30 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# Python & Caching
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Model Weights & Datasets
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+data/
+checkpoints/
+
+# Video & Media Files
+*.mp4
+*.avi
+*.mkv
+
+# Environment Variables & IDEs
+.env
+.vscode/
+.idea/
+.DS_Store
